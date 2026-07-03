@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIJJY - ร้านเช่าชุดแต่งงาน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- แถบเมนูนำทาง -->
+    <header>
+        <div class="logo">PIJJY</div>
+        <nav>
+            <button onclick="showPage('home')" class="nav-btn active" id="nav-home">Home</button>
+            <button onclick="showPage('shop')" class="nav-btn" id="nav-shop">Shop</button>
+            <button onclick="showPage('favorite')" class="nav-btn" id="nav-favorite">Favorite</button>
+            <button onclick="showPage('contact')" class="nav-btn" id="nav-contact">Contact</button>
+            <button onclick="showPage('review')" class="nav-btn" id="nav-review">Review</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- หน้า Home -->
+        <section id="home" class="page active">
+            <div class="banner">
+                <div class="banner-text">
+                    <h1>ยินดีต้อนรับสู่ร้าน PIJJY</h1>
+                    <p>รังสรรค์วันสำคัญของคุณให้สมบูรณ์แบบด้วยชุดแต่งงานที่สวยที่สุด</p>
+                    <button class="btn-primary" onclick="showPage('shop')">เลือกชมชุดของเรา</button>
+                </div>
+            </div>
+            <div class="shop-info">
+                <h2>เกี่ยวกับร้านของเรา</h2>
+                <p>ร้าน <strong>PIJJY</strong> เปิดให้บริการเช่าชุดแต่งงานมาแล้วกว่า 10 ปี เรามีความเชี่ยวชาญในการคัดสรรชุดแต่งงานคุณภาพสูง ทั้งชุดเจ้าสาวที่งดงามและชุดเจ้าบ่าวที่สง่างาม ตัดเย็บด้วยความประณีต มีไซส์ให้เลือกหลากหลาย พร้อมบริการปรับแก้ทรงให้พอดีตัว เพื่อให้คุณมั่นใจที่สุดในวันสำคัญของคุณ</p>
+            </div>
+        </section>
+
+        <!-- หน้า Shop -->
+        <section id="shop" class="page">
+            <h2 class="section-title">คอลเลกชันชุดแต่งงาน</h2>
+            <div class="product-grid" id="product-list">
+                <!-- สินค้าจะถูกสร้างด้วย JavaScript -->
+            </div>
+        </section>
+
+        <!-- หน้า Favorite -->
+        <section id="favorite" class="page">
+            <h2 class="section-title">รายการโปรดของคุณ</h2>
+            <div id="empty-fav" style="text-align: center; color: #888;">ยังไม่มีชุดในรายการโปรด</div>
+            <div class="product-grid" id="favorite-list">
+                <!-- รายการโปรดจะถูกสร้างด้วย JavaScript -->
+            </div>
+        </section>
+
+        <!-- หน้า Contact -->
+        <section id="contact" class="page">
+            <h2 class="section-title">ติดต่อเรา</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>ช่องทางการติดต่อ</h3>
+                    <p>📍 <strong>ที่อยู่:</strong> 280 ถนนสรรพาวุธ แขวงบางนา เขตบางนา กรุงเทพฯ 10260</p>
+                    <p>📞 <strong>เบอร์โทร:</strong> 061-974-0124</p>
+                    <p>✉️ <strong>อีเมล:</strong> contact@pijjywedding.com</p>
+                    <p>📱 <strong>Line ID:</strong> @pijjywedding</p>
+                    <p>📘 <strong>Facebook:</strong> PIJJY Wedding Dress</p>
+                    <p>📸 <strong>Instagram:</strong> @pijjy_wedding</p>
+                </div>
+                <div class="chat-box">
+                    <button class="btn-primary chat-btn">💬 พูดคุยกับแอดมิน</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- หน้า Review -->
+        <section id="review" class="page">
+            <h2 class="section-title">รีวิวจากลูกค้า</h2>
+            <div class="review-list">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"ชุดสวยมากค่ะ เนื้อผ้าดี แอดมินบริการดีมาก แนะนำไซส์ได้พอดีตัวเลย วันงานมีแต่คนชมชุดค่ะ"</p>
+                    <p class="review-date">เมื่อ 2 สัปดาห์ที่แล้ว</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"เช่าทั้งชุดเจ้าบ่าวและเจ้าสาวที่นี่ ไม่ผิดหวังเลยครับ ชุดใหม่มาก ราคาสมเหตุสมผล"</p>
+                    <p class="review-date">เมื่อ 1 เดือนที่แล้ว</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p class="review-text">"แบบชุดมีให้เลือกเยอะมาก ลองจนเหนื่อยแต่พี่ๆ ที่ร้านน่ารักมากค่ะ คอยดูแลตลอด"</p>
+                    <p class="review-date">เมื่อ 5 เดือนที่แล้ว</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal สำหรับแสดงรายละเอียดชุดและจอง (หน้าต่างป๊อปอัป) -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Dress">
+                <div class="modal-details">
+                    <h2 id="modal-title">ชื่อชุด</h2>
+                    <p class="price" id="modal-price">฿0</p>
+                    
+                    <label for="size-select"><strong>เลือกไซส์ (ส่วนสูงที่แนะนำ):</strong></label>
+                    <select id="size-select">
+                        <option value="S">S (อก 32" / เอว 25" / สูง 155-160cm)</option>
+                        <option value="M">M (อก 34" / เอว 27" / สูง 161-165cm)</option>
+                        <option value="L">L (อก 36" / เอว 29" / สูง 166-170cm)</option>
+                        <option value="XL">XL (อก 38" / เอว 31" / สูง 171-175cm)</option>
+                        <option value="2XL">2XL (อก 40" / เอว 32" / สูง 176-180cm)</option>
+                        <option value="3XL">3XL (อก 41" / เอว 33" / สูง 181-185cm)</option>
+                        <option value="4XL">4XL (อก 42" / เอว 34" / สูง 186-190cm)</option>
+                    </select>
+
+                    <label for="pickup-date"><strong>วันรับชุด:</strong></label>
+                    <input type="date" id="pickup-date">
+
+                    <label for="return-date"><strong>วันคืนชุด:</strong></label>
+                    <input type="date" id="return-date">
+
+                    <button class="btn-primary" onclick="confirmBooking()" style="margin-top: 15px; width: 100%;">ยืนยันการจอง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
